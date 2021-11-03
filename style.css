@@ -1,10 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
 body {
-    background-color: rgb(54, 54, 54);
+    background-color: green;
     color:rgb(255, 255, 255);
-    margin: 5%;
 }
-h2 {
-    color: rgb(127, 199, 127);
+main {
+    background-color: rgb(66, 66, 66);
+}
+article {
+    margin-top: 100px;
+    width: 80%;
+}
+h1 {
+    font-size: 50px;
+    font-family: Arial;
+}
+.aboutme {
+    width: 80%;
+    margin-left: 20%;
+}
+h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style:none;
     font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+li div {
+    color: rgb(207, 207, 207);
+    font-style: italic;
+    font-weight: lighter
+}
+header {
+    background-color: green;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+.top-title {
+    color: rgb(255, 255, 255);
+    font-family: Impact;
+    margin: 10px;
     
+}
+.cv {
+    padding: 70px 70px 90px 70px;
+    background-color: rgb(39, 97, 39);
+    
+}
+.qualifications {
+    display: inline-block;
+    width: 40%;
+    margin: 10px;
+    vertical-align: top;
+}
+span{
+    margin-bottom: 10px;
+}
+.skills {
+    display: inline-block;
+    width: 40%;
+    margin: 10px;
+    vertical-align: middle;
+}
+.skills span {
+    float: left;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10vw;
+    background-color: rgb(223, 223, 223);
+}
+.about-box {
+    padding: 70px 70px 90px 70px;
+    background-color: rgb(44, 44, 44); 
+    vertical-align: middle;
+}
+.about {
+    display: inline-block;
+    width: 40%;
+    margin: 10px;
+    vertical-align: middle;
+}
+.profile-picture {
+    border-radius: 100%;
+    width: 240px;
+}
+footer {
+    background-color: green;
+    position: absolute;
+    width: 100%;
+}
+.social-icon {
+    display: inline-block;
+    margin: 10px;
+    vertical-align: right;
+}
+.icon {
+    border-radius: 100%;
+    width: 30px;
+}
+.center {
+    margin-left: 25%;
 }
