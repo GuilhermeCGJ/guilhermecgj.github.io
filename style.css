@@ -1,113 +1,160 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-body {
-    background-color: green;
-    color:rgb(255, 255, 255);
-}
-main {
-    background-color: rgb(66, 66, 66);
-}
-article {
-    margin-top: 100px;
-    width: 80%;
-}
-h1 {
-    font-size: 50px;
-    font-family: Arial;
-}
-.aboutme {
-    width: 80%;
-    margin-left: 20%;
-}
-h3 {
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-li {
-    font-family: Arial, Helvetica, sans-serif;
-    list-style:none;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-li div {
-    color: rgb(207, 207, 207);
-    font-style: italic;
-    font-weight: lighter
-}
 header {
-    background-color: green;
+  background-color: #1d1525;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+}
+
+a {
+  color: #ff4a4b;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-left: 30px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 30px;
+  height: 2px;
+  background: #ff4a4b;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
     position: absolute;
-    top: 0px;
-    width: 100%;
+    top: 5vh;
+    right: 0;
+    width: 50vw;
+    height: 95vh;
+    background: #1d1525;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
 }
-.top-title {
-    color: rgb(255, 255, 255);
-    font-family: Impact;
-    margin: 10px;
-    
+
+.nav-list.active {
+  transform: translateX(0);
 }
-.cv {
-    padding: 70px 70px 90px 70px;
-    background-color: rgb(39, 97, 39);
-    
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-.qualifications {
-    display: inline-block;
-    width: 40%;
-    margin: 10px;
-    vertical-align: top;
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
 }
-span{
-    margin-bottom: 10px;
+
+.mobile-menu.active .line2 {
+  opacity: 0;
 }
-.skills {
-    display: inline-block;
-    width: 40%;
-    margin: 10px;
-    vertical-align: middle;
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
 }
-.skills span {
-    float: left;
-    color: black;
-    font-weight: bold;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 10vw;
-    background-color: rgb(223, 223, 223);
+
+main {
+  background: url(img/main-bg.jpg) no-repeat center center;
+  background-size: cover;
+  background-color: rgb(25, 12, 37);
+  height: 95vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.about-box {
-    padding: 70px 70px 90px 70px;
-    background-color: rgb(44, 44, 44); 
-    vertical-align: middle;
+
+.post-content {
+  background-color: #231a2d;
+  max-width: 400px;
+  width: 60vw;
+  height: 150px;
+  align-self: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-radius: 5%;
+  border-color: #ff4a4b;
+  border-style: double;
 }
-.about {
-    display: inline-block;
-    width: 40%;
-    margin: 10px;
-    vertical-align: middle;
+
+#hi {
+  margin-left: 3vw;
+  font-weight: lighter;
+  color: #c7c7c7;
 }
-.profile-picture {
-    border-radius: 100%;
-    width: 240px;
+
+#name {
+  margin-left: 3vw;
+  color: #67e0bc;
 }
-footer {
-    background-color: green;
-    position: absolute;
-    width: 100%;
+
+#webdev {
+  margin-left: 3vw;
+  font-size: 14px;
+  color: #ff4a4b;
 }
-.social-icon {
-    display: inline-block;
-    margin: 10px;
-    vertical-align: right;
-}
-.icon {
-    border-radius: 100%;
-    width: 30px;
-}
-.center {
-    margin-left: 25%;
+
+#hire {
+  align-self: center;
+  padding: 7px;
+  font-size: small;
+  font-weight: bolder;
+  color: #f7f7f7;
+  background-color: #ff4a4b;
+  border-radius: 5%;
 }
